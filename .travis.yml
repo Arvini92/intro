@@ -1,8 +1,13 @@
 language: node_js
-
 node_js:
-  - "12"
-
+- '12'
 script:
-    - npm test
-    - npm run build
+- npm test
+- npm run build
+deploy:
+  provider: firebase
+  token:
+    secure: "encrypted_firebase_CI_token"
+env:
+  global:
+    secure: 0bAnpMu4YnM5swCfTLD/+4mAQ4smTjkBW9q8L4/SaPYioCdzFoUwWNKZpc8JQCG4a17lU+J+1wf+Fffng49vZzGd9mZZKoU/2M34DKoU26/3OSEINPQ6850ur5wJus+zqctfZGhr0uGEz4Qjp7D3nUv6pGwhAlxTnYXQiUTb1pxHVsx8CYgLr2rZOZM3dQH6PpCaAMQmoW+i2T2I+t0O8I0NSScZ7eIDm5WHZN2dXJvc/RHjUWRDaJ/jYXNeuqcvJhkqVSgsqxsR9EWBMlwWzntnbpWsELRmN2stPgLiXa/8uQmEhnu8QgdDAIhpTAZwyJ4HRytkg94JFIr7AApIhTYnvQdNaKiJtkVegl7T8hxn49hybqARE/L6x+TVqfIXDK3DyWwpzTTBSrq1nV7U1GKaNvGIQQACRUeWsepo/T+ACmUxIF1/8GVahnCZF6TMjR44wQQKsFzlU6MPhiEFeKaMxW+wM79SY16G6+8fWRqnm2wZn2twi7L9yfhJpmTmbGqwWVYDqgvMD5IGKEu7m063g7pMRpVYInGjN3F2wS8ml6G9kGTWSHb6VjuHhyn6Jz1hLQixq6xWwsNIFbv9iqVh7j52rnIm5Y/rLaWo2+Hk7ywD6WLpvvQ6kk6oXoUXAdgHGmpEor3oEqLZg4lsfhHgNBTiviPymffcFvPDJy0=
